@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Calculator</title>
+    <link rel="stylesheet" href="calculator.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="calculator">
+        <div class="calculator-header">
+            <button id="theme-toggle" aria-label="Toggle theme">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="theme-icon">
+                    <circle cx="12" cy="12" r="5"></circle>
+                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                </svg>
+            </button>
+            <button id="history-toggle" aria-label="Toggle history">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="history-icon">
+                    <path d="M3 3v5h5"></path>
+                    <path d="M3.05 13A9 9 0 1 0 6 5.3L3 8"></path>
+                    <path d="M12 7v5l4 2"></path>
+                </svg>
+            </button>
+        </div>
+        <div class="calculator-screen">
+            <div id="expression" class="expression"></div>
+            <div id="result" class="result">0</div>
+        </div>
+        <div class="calculator-buttons">
+            <button class="btn function" data-action="clear">C</button>
+            <button class="btn operator" data-action="(">(</button>
+            <button class="btn operator" data-action=")">)</button>
+            <button class="btn operator" data-action="/">÷</button>
+            <button class="btn number" data-action="7">7</button>
+            <button class="btn number" data-action="8">8</button>
+            <button class="btn number" data-action="9">9</button>
+            <button class="btn operator" data-action="*">×</button>
+            <button class="btn number" data-action="4">4</button>
+            <button class="btn number" data-action="5">5</button>
+            <button class="btn number" data-action="6">6</button>
+            <button class="btn operator" data-action="-">-</button>
+            <button class="btn number" data-action="1">1</button>
+            <button class="btn number" data-action="2">2</button>
+            <button class="btn number" data-action="3">3</button>
+            <button class="btn operator" data-action="+">+</button>
+            <button class="btn number" data-action="0">0</button>
+            <button class="btn number" data-action=".">.</button>
+            <button class="btn function" data-action="delete">DEL</button>
+            <button class="btn equals" data-action="=">=</button>
+        </div>
+        <div id="history-panel" class="history-panel">
+            <h3>History</h3>
+            <ul id="history-list"></ul>
+        </div>
+    </div>
+    <script src="calculator.js"></script>
+</body>
+</html>
+
